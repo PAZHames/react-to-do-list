@@ -14,8 +14,10 @@ const handleSubmit = (event) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="toDoInput">Add Item:</label>
       <input
         type="text"
+        name="toDoInput"
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
       />
