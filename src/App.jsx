@@ -1,7 +1,9 @@
+import AddToDo from "../components/add";
+
 export default App;
 
 function App() {
     return (
-        <p>Hello hello</p>
+    <AddToDo/>
     )
 }
