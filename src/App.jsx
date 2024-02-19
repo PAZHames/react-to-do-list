@@ -1,9 +1,8 @@
-import AddToDo from "../components/add";
-
+import MainComponent from "../components/MainComponent";
 export default App;
 
 function App() {
     return (
-    <AddToDo/>
+    <MainComponent/>
     )
 }
