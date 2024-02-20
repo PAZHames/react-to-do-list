@@ -3,10 +3,12 @@ import AddToDo from './AddToDo';
 import DeleteButton from './DeleteButton'; 
 import Search from "./Search"; 
 import PrioritySelector from "./Priority"; 
+import MarkCompleted from "./MarkCompleted";
 
 export default function MainComponent() {
   const [items, setItems] = useState([]);
   const [originalItems, setOriginalItems] = useState([]);
+  const [completedItems, setCompletedItems] = useState([]);
 
   const addItem = (text) => {
     const newItem = { text, priority: 'medium' }; 
@@ -49,6 +51,10 @@ export default function MainComponent() {
     }
   };
 
+  const markCompleted = (completed) => {
+    // add in higher function to mark item as completed - and move to completed items list?
+  }
+
   return (
     <div>
       <AddToDo onAdd={addItem} />
@@ -56,6 +62,11 @@ export default function MainComponent() {
       <ul>
         {items.map((item, index) => (
           <li key={index} style={{ color: getPriorityColor(item.priority) }}>
+            <MarkCompleted 
+            completed = {item.completed}
+            onChange={(completed) => updateCompleted(completed)}
+            />
+            {/* check use of this! probably a bit dodgy! */}
             {item.text} 
             <PrioritySelector
               priority={item.priority}
