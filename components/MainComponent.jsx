@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddToDo from './AddToDo'; 
 import DeleteButton from './DeleteButton'; 
 import Search from "./Search"; 
@@ -6,9 +6,18 @@ import PrioritySelector from "./Priority";
 import MarkCompleted from "./MarkCompleted";
 
 export default function MainComponent() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    const savedItems = localStorage.getItem('todos');
+    return savedItems ? JSON.parse(savedItems) :[];
+  });
   const [originalItems, setOriginalItems] = useState([]);
   const [completedItems, setCompletedItems] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(items));
+    setOriginalItems(items);
+},[items]);
+
 
   const addItem = (text) => {
     const newItem = { text, priority: 'medium' }; 
@@ -54,6 +63,7 @@ export default function MainComponent() {
   const markCompleted = (completed) => {
     // add in higher function to mark item as completed - and move to completed items list?
   }
+
 
   return (
     <div>
