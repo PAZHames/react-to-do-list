@@ -1,16 +1,16 @@
-import { useState } from 'react';
+export default function MarkCompleted({ setItems, itemId }) {
 
-export default function MarkCompleted({ onComplete, itemId }) {
-
-    const [completedItems, setCompletedItems] = useState([]);
-
-    setCompletedItems((prevState) => {
-        // always use states to update - don't use variables - use prevState to ensure it is updating from the previous state 
-        items.filter((item) => item.completed)
-        // not working because items not sent in, prev state is 
-    });
+    const handleMarkComplete = () => {
+        // onComplete(itemId);
+        
+        setItems(prevState => 
+            prevState.map(item => 
+                item.id === itemId ? { ...item, completed: true } : item
+            )
+        );
+    };
 
     return (
-        <button className="inline-button" onClick={() => onComplete(itemId)}>✅</button>
-        );
-  }
+        <button className="inline-button" onClick={handleMarkComplete}>✅</button>
+    );
+}

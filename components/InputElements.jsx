@@ -1,10 +1,10 @@
 import AddToDo from "./AddToDo";
 import Search from "./Search";
 
-export default function InputElements({ items, setItems }) {
+export default function InputElements({ setItems }) {
     return (
     <div className="searches">
-      <AddToDo onAdd={AddToDo} items={items} setItems={setItems} />
+      <AddToDo onAdd={AddToDo} setItems={setItems} />
       <Search setItems={setItems} />
       </div>
     )
