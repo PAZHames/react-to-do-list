@@ -4,13 +4,15 @@ export default function DisplayCompletedItems ({ items, setItems }) {
     return (
         <>
         <h2>Complete</h2>
-        <ul>
+        <ul >
             {items
             .filter((item) => item.completed)
             .map((item, index) => (
-            <li key={index}>
+            <li key={index} className="completed-list-item">
             {item.text} 
-            <DeleteButton itemId={item.id} setItems={setItems}/>
+            <span className="to-do-buttons">
+                <DeleteButton itemId={item.id} setItems={setItems}/>
+            </span>
           </li>
             ))}
         </ul>

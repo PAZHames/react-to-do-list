@@ -16,14 +16,17 @@ export default function DisplayToDoList ({ items, setItems, getPriorityColor, up
             
             {item.text} 
 
-            <PrioritySelector
-              priority={item.priority}
-              onChange={(newPriority) => updatePriority(index, newPriority)}
-            />
+            
+            <span className='to-do-buttons'>
+                <PrioritySelector
+                priority={item.priority}
+                onChange={(newPriority) => updatePriority(index, newPriority)}
+                />
+                <MarkCompleted setItems={setItems} />
+                <DeleteButton itemId={item.id} setItems={setItems}/>
+            </span>
 
-            <MarkCompleted setItems={setItems} />
-
-            <DeleteButton itemId={item.id} setItems={setItems}/>
+            
           </li>
         ))}
       </ul>

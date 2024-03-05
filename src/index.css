@@ -12,6 +12,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: deeppink;
+}
+
 ul {
     padding-left: 0;
 }
@@ -64,6 +68,7 @@ label {
 border: 2px solid navy;
 padding: 10px;
 border-radius: 5px;
+margin-bottom: 20px;
 }
 
 .inline-button {
@@ -71,6 +76,7 @@ border-radius: 5px;
     border: 2px solid navy;
     color: white;
     border-radius: 5px;
+    margin-right: 5px;
 }
 
 .inline-button:hover {
@@ -78,4 +84,12 @@ border-radius: 5px;
     color: navy;
     transition: ease-in-out;
     cursor: pointer;
+}
+
+.completed-list-item {
+    background-color: #E6F8E0;
+}
+
+.to-do-buttons {
+    float: right;
 }
