@@ -3,7 +3,7 @@ import PrioritySelector from './Priority';
 import MarkCompleted from './MarkCompleted';
 import DeleteButton from './DeleteButton';
 
-export default function DisplayToDoList ({items, setItems, getPriorityColor, updatePriority, markComplete}) {
+export default function DisplayToDoList ({items, setItems, getPriorityColor, updatePriority}) {
     // destructured the props to access the specific one I need
     return (
         <ul>
@@ -19,7 +19,7 @@ export default function DisplayToDoList ({items, setItems, getPriorityColor, upd
               onChange={(newPriority) => updatePriority(index, newPriority)}
             />
 
-            <MarkCompleted onComplete={() => markComplete(index)} />
+            <MarkCompleted setItems={setItems} />
 
             <DeleteButton itemId={item.id} setItems={setItems}/>
           </li>
