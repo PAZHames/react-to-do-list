@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddToDo ({ items, setItems }) {
+export default function AddToDo ({ setItems }) {
 
 const [inputText, setInputText] = useState("");
 
@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
   };
 
   const addItem = (text) => {
-    setItems([...items, { text, priority: 'medium', completed: false }]);
+    setItems((prevState) => {[...prevState, { text, priority: 'medium', completed: false }]});
   };
 
   return (
