@@ -1,20 +1,24 @@
 import { useState } from "react";
 
-export default function AddToDo ({ onAdd }) {
+export default function AddToDo ({ items, setItems }) {
 
 const [inputText, setInputText] = useState("");
 
 const handleSubmit = (event) => {
     event.preventDefault();
     if (inputText.trim()) {
-      onAdd(inputText);
+      addItem(inputText);
       setInputText("");
     }
   };
 
+  const addItem = (text) => {
+    setItems([...items, { text, priority: 'medium', completed: false }]);
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="toDoInput">Add Item:</label>
+      <label htmlFor="toDoInput">Add:</label>
       <input
         type="text"
         name="toDoInput"
@@ -24,4 +28,3 @@ const handleSubmit = (event) => {
     </form>
   );
 }
-

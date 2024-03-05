@@ -1,0 +1,69 @@
+.main {
+    margin: 50px;
+}
+
+h1, label, li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: navy;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;  
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #fafafa;
+}
+
+form {
+    padding: 10px;
+}
+
+select {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: navy; 
+    text-align: center;
+    padding-right: 10px;
+}
+
+.searches {
+border: 2px solid navy;
+padding: 10px;
+border-radius: 5px;
+}
+
+.inline-button {
+    background-color: navy;
+    border: 2px solid navy;
+    color: white;
+    border-radius: 5px;
+}
+
+.inline-button:hover {
+    background-color: white;
+    color: navy;
+    transition: ease-in-out;
+    cursor: pointer;
+}
