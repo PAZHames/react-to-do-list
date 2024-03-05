@@ -1,9 +1,9 @@
 main {
     margin: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1, label, li {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: navy;
 }
 
@@ -46,6 +46,18 @@ label {
     color: navy; 
     text-align: center;
     padding-right: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
 }
 
 .searches {

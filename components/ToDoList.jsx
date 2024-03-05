@@ -6,6 +6,8 @@ import DeleteButton from './DeleteButton';
 export default function DisplayToDoList ({ items, setItems, getPriorityColor, updatePriority}) {
     console.log(items);
     return (
+        <>
+        <h2>To Dos</h2>
         <ul>
         {items
         .filter((item) => !item.completed)
@@ -25,5 +27,6 @@ export default function DisplayToDoList ({ items, setItems, getPriorityColor, up
           </li>
         ))}
       </ul>
+      </>
     )
 }
