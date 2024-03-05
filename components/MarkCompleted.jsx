@@ -1,7 +1,7 @@
-export default function MarkCompleted({ setItems, onComplete, itemId }) {
-    
+export default function MarkCompleted({ setItems, itemId }) {
+
     const handleMarkComplete = () => {
-        onComplete(itemId);
+        // onComplete(itemId);
         
         setItems(prevState => 
             prevState.map(item => 
