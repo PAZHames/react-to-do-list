@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
   };
 
   const addItem = (text) => {
-    setItems((prevState) => {[...prevState, { text, priority: 'medium', completed: false }]});
+    setItems((prevState) => [...prevState, { text, priority: 'medium', completed: false }]);
   };
 
   return (

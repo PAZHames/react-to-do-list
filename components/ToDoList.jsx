@@ -3,8 +3,8 @@ import PrioritySelector from './Priority';
 import MarkCompleted from './MarkCompleted';
 import DeleteButton from './DeleteButton';
 
-export default function DisplayToDoList ({items, setItems, getPriorityColor, updatePriority}) {
-    // destructured the props to access the specific one I need
+export default function DisplayToDoList ({ items, setItems, getPriorityColor, updatePriority}) {
+    console.log(items);
     return (
         <ul>
         {items
