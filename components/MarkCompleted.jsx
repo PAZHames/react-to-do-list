@@ -1,16 +1,15 @@
-export default function MarkCompleted({ setItems, itemId }) {
+export default function MarkCompleted({ setItems, targetId }) {
 
-    const handleMarkComplete = () => {
-        // onComplete(itemId);
+    const handleMarkComplete = (targetId) => {
         
         setItems(prevState => 
             prevState.map(item => 
-                item.id === itemId ? { ...item, completed: true } : item
+                item.id === targetId ? { ...item, completed: true } : item
             )
         );
     };
 
     return (
-        <button className="inline-button" onClick={handleMarkComplete}>✅</button>
+        <button className="inline-button" onClick={() => handleMarkComplete(targetId)}>✅</button>
     );
 }

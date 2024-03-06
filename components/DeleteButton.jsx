@@ -1,4 +1,4 @@
-export default function  DeleteButton({ itemId, setItems }) {
+export default function  DeleteButton({ targetId, setItems }) {
 
     const handleDelete = (targetId) => {
        setItems(prevState => 
@@ -7,6 +7,6 @@ export default function  DeleteButton({ itemId, setItems }) {
     }
 
     return (
-    <button className="inline-button" onClick={() => handleDelete(itemId)}>❌</button>
+    <button className="inline-button" onClick={() => handleDelete(targetId)}>❌</button>
     );
 }
