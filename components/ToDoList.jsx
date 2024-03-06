@@ -23,7 +23,7 @@ export default function DisplayToDoList ({ items, setItems, getPriorityColor, up
                 onChange={(newPriority) => updatePriority(index, newPriority)}
                 />
                 <MarkCompleted setItems={setItems} />
-                <DeleteButton itemId={item.id} setItems={setItems}/>
+                <DeleteButton targetId={item.id} setItems={setItems}/>
             </span>
 
             
