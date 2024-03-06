@@ -11,7 +11,7 @@ export default function DisplayCompletedItems ({ items, setItems }) {
             <li key={index} className="completed-list-item">
             {item.text} 
             <span className="to-do-buttons">
-                <DeleteButton itemId={item.id} setItems={setItems}/>
+                <DeleteButton targetId={item.id} setItems={setItems}/>
             </span>
           </li>
             ))}

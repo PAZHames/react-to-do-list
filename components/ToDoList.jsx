@@ -3,7 +3,7 @@ import PrioritySelector from './Priority';
 import MarkCompleted from './MarkCompleted';
 import DeleteButton from './DeleteButton';
 
-export default function DisplayToDoList ({ items, setItems, getPriorityColor, updatePriority}) {
+export default function DisplayToDoList ({ items, setItems, getPriorityColor}) {
     console.log(items);
     return (
         <>
@@ -19,10 +19,10 @@ export default function DisplayToDoList ({ items, setItems, getPriorityColor, up
             
             <span className='to-do-buttons'>
                 <PrioritySelector
-                priority={item.priority}
-                onChange={(newPriority) => updatePriority(index, newPriority)}
+                priority={item.priority} targetId={item.id} setItems={setItems}
+                // onChange={(newPriority) => updatePriority(index, newPriority)}
                 />
-                <MarkCompleted setItems={setItems} />
+                <MarkCompleted targetId={item.id} setItems={setItems} />
                 <DeleteButton targetId={item.id} setItems={setItems}/>
             </span>
 
